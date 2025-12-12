@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Guess-result</title>
+      <style>
+        button
+        {
+          padding:7px;
+          background-color: aqua;
+          margin-left: 150px;
+          cursor: pointer;
+          border-radius: 3px;
+          border:none;
+          box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.327);
+        }
+        button:active{
+          opacity:0.7;
+        }
+        div
+        {
+          margin: 50px;
+        }
+        label{
+          margin-right: 10px;
+          font-size: larger ;
+        }
+        input{
+          padding: 7px;
+          
+        }
+      </style>
+    </head>
+    <body>
+      <div >
+      <label for="guess">Your Guessing  :</label>
+      <input id="guess" type="text" placeholder="Type your guessing..">
+      </div>
+      <button onclick="
+      const randomnumber=Math.random();
+      console.log(randomnumber);
+      let computerGuess='';
+      randomnumber<=0.5 ? computerGuess='head' :computerGuess='tail';
+      alert(computerGuess);
+      let userGuess=document.getElementById('guess').value.toLowerCase().trim();
+      userGuess===computerGuess ?
+        alert('You guessed right') :
+        alert('You guessed wrong');
+      ">Check</button>
+    </body>
+</html>

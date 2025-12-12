@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Console-BASED-Simple-Rock-Paper-Scissor</title>
+    <style>
+      button{
+        margin: 20px;
+        padding:12px;
+        border: none;
+        border-radius: 2px;
+        background-color: greenyellow;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.329);
+        transition: padding 0.15s margin 0.15s;
+        cursor: pointer;
+      }
+      button:active{
+        padding: 13px;
+        margin: 19px;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+        onclick="
+        const rand=10*(Math.random());
+        let ComputerMove = '';
+        console.log(rand);
+        if(rand>0 && rand <3)
+        {
+          ComputerMove='rock';
+        }
+        else if (rand>=3 && rand <6)
+        {
+          ComputerMove='paper';
+        }
+        else
+        {
+          ComputerMove='scissor';
+        }
+        console.log(ComputerMove);
+        let result='';
+        if(ComputerMove==='rock')
+        {
+          result='The match Tied..';
+        }
+        else if(ComputerMove==='paper')
+        {
+          result='You Lost';
+        }
+        else{
+          result='You Won';
+        }
+        alert(`Computer Move is ${ComputerMove} and  ${result}`);
+        "
+      >
+      Rock</button>
+
+    <button
+        onclick="
+        const rand=10*(Math.random());
+        let ComputerMove = '';
+        console.log(rand);
+        if(rand>0 && rand <3)
+        {
+          ComputerMove='rock';
+        }
+        else if (rand>=3 && rand <6)
+        {
+          ComputerMove='paper';
+        }
+        else
+        {
+          ComputerMove='scissor';
+        }
+        console.log(ComputerMove);
+        let result='';
+        if(ComputerMove==='rock')
+        {
+          result='You Won';
+        }
+        else if(ComputerMove==='paper')
+        {
+          result='The match Tied..';
+        }
+        else{
+          result='You Lost';
+        }
+        alert(`Computer Move is ${ComputerMove} and  ${result}`);
+        "    
+    >
+        Paper</button>
+    <button
+        onclick="
+        const rand=10*(Math.random());
+        let ComputerMove = '';
+        console.log(rand);
+        if(rand>0 && rand <3)
+        {
+          ComputerMove='rock';
+        }
+        else if (rand>=3 && rand <6)
+        {
+          ComputerMove='paper';
+        }
+        else
+        {
+          ComputerMove='scissor';
+        }
+        console.log(ComputerMove);
+        let result='';
+        if(ComputerMove==='rock')
+        {
+          result='You Lost';
+        }
+        else if(ComputerMove==='paper')
+        {
+          result='You Won';
+        }
+        else{
+          result='The match Tied..';
+        }
+        alert(`Computer Move is ${ComputerMove} and  ${result}`);
+        "       
+    >
+      Scissor</button>
+    
+  </body>
+</html>

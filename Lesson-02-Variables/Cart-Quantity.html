@@ -26,31 +26,61 @@
     <p> Cart Quantity</p>
     <button class="Show"
     onclick="
-    console.log(`Cart Quantity: ${count}`);">
+        console.log(`Cart Quantity: ${count}`);">
       Show Quantity
     </button>
     <button class="Add" 
     onclick="
-    count = count+1;
-    console.log(`Cart Quantity: ${count}`); ">
+        count = count+1;
+        if(count>10){
+            alert('Cart is full');
+        }
+        else
+        {
+          console.log(`Cart Quantity: ${count}`);
+        }  ">
       Add to Cart
     </button>
     <button class="+2" 
-    onclick="
-    count=+2;
-    console.log(`Cart Quantity: ${count}`); ">
+        onclick="
+        count+=2;
+        if(count>10){
+            alert('Cart is full');
+        }
+        else
+        {
+          console.log(`Cart Quantity: ${count}`);
+        } ">
       +2
     </button>
     <button class="+3" 
-    onclick="
-    count=+3;
-    console.log(`Cart Quantity: ${count}`); ">
+        onclick="
+        count+=3;
+        if(count>10){
+            alert('Cart is full');
+        }
+        else
+        {
+          console.log(`Cart Quantity: ${count}`);
+        }">
       +3
     </button>
-    <button class="Reset" 
+      <button class="Add" 
     onclick="
-    count=0;
-    console.log(`Cart Quantity: ${count}`);">
+        count = count-1;
+        if(count<0){
+            alert('Cart is Empty');
+        }
+        else
+        {
+          console.log(`Cart Quantity: ${count}`);
+        }  ">
+      Remove from Cart
+    </button>
+    <button class="Reset" 
+        onclick="
+        count=0;
+        console.log(`Cart Quantity: ${count}`);">
       Reset Cart
     </button>
   <script>

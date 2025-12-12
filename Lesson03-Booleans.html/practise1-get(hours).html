@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Current-Hour</title>
+        <style>
+          button{
+            margin:20px;
+            padding: 10px;
+            border-radius: 3px;
+            border: none;
+            background-color: rgba(136, 14, 14, 0.904);
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400px;
+            transition: opacity 0.15s;
+          }
+          button:active{
+            opacity: 0.7;
+          }
+        </style>
+    </head>
+    <body>
+        <button onclick="
+          const now=new Date();
+          let hour= now.getHours();
+          console.log(hour);
+          if( hour>=6 && hour<=12 )
+          {
+            alert(`current Time is ${hour}
+Good Morning`);  
+          }
+          else if(hour>=13 && hour<=17)
+          {
+            alert(`current Time is ${hour} 
+Good Afternoon`);
+          }
+          else
+          {
+            alert(`current Time is ${hour}
+Good Night`);
+          }
+        ">
+            Current-Hour
+        </button>
+        
+    </body>
+</html>
